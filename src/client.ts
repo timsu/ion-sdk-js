@@ -96,10 +96,10 @@ export default class Client extends EventEmitter {
 
   async unpublish(stream: LocalStream) {
     if (!stream) {
-      throw new Error('Undefined LocalStream in unpublish.')
+      throw new Error('Undefined LocalStream in unpublish.');
     }
-    this.localStreams = this.localStreams.filter(localStream => localStream !== stream)
-    return await stream.unpublish()
+    this.localStreams = this.localStreams.filter((localStream) => localStream !== stream);
+    return await stream.unpublish();
   }
 
   async subscribe(mid: string): Promise<RemoteStream> {
