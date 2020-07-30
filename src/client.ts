@@ -126,7 +126,7 @@ export default class Client extends EventEmitter {
           await localStream.unpublish();
         }
       }));
-      this.localStreams = []
+      this.localStreams = [];
       Object.values(this.streams).forEach((stream) => stream.unsubscribe());
       this.knownStreams.clear();
       log.info('leave success: result => ' + JSON.stringify(data));
