@@ -116,6 +116,7 @@ export default class WebRTCTransport {
 
     const fmtp: any[] = [
       // { "payload": 97, "config": "apt=" + payload }
+      { "payload": 102, "config": "level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f" }
     ];
 
     session.media[videoIdx].fmtp = fmtp;
